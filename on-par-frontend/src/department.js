@@ -8,6 +8,8 @@ class Department {
     static fetchDepartments(){
         fetch(`${BACKEND_URL}/department`)
             .then(resp => resp.json)
-            .then(json)
+            .then(json => {
+
+            })
     }
 }

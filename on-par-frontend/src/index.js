@@ -1,6 +1,6 @@
 const BACKEND_URL = 'http://localhost:3000';
 const navBar = document.querySelector("nav");
-const container = document.querySelector(".container")
+const container = document.querySelector(".selected-list")
 
 document.addEventListener("DOMContentLoaded",() => {
   navBar.addEventListener("click", navigate)
@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded",() => {
 
 function navigate(){
   switch(true) {
-    case (event.target.id === "department-nav")
-      container.innerHTML = ""
+    case (event.target.id === "departments-nav"):
+      container.innerHTML = "poop"
       Department.fetchDepartments()
       break;
-    case (event.target.id === "items-nav")
+    case (event.target.id === "items-nav"):
       container.innerHTML = ""
       Item.fetchItems()
       break;

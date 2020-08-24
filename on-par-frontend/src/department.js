@@ -6,9 +6,9 @@ class Department {
     }
 
     static fetchDepartments(){
-        fetch(`${BACKEND_URL}/department`)
+        fetch(`${BACKEND_URL}/departments`)
             .then(resp => resp.json)
-            .then(deptartments => {
+            .then(departments => {
                 this.renderDepts()
                 departments.forEach(department =>{
                     let dept = new Department(department)

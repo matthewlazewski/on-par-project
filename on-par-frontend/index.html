@@ -5,9 +5,27 @@
     <title>OnPar</title>
   </head>
   <body>
-   <h1 id="heading">Welcome to OnPar. Serving All Your Inventory Management Needs.</h1>
-   <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
-   <script type="application/javascript" src="src/item.js" charset="UTF-8"></script>
-   <script type="application/javascript" src="src/department.js" charset="UTF-8"></script>
+    <h1 id="heading">Welcome to OnPar. Serving All Your Inventory Management Needs.</h1>
+
+    <ul id="items">
+
+    </ul>
+
+    <h3>Add Item</h3>
+    <form id="item-form">
+      <label for="item-name">Name:</label>
+      <input type="text" name="name" id="item-name"><br><br>
+      <label for="item-on-hand">On Hand:</label>
+      <input type="number" name="on-hand" id="item-on-hand"><br><br>
+      <label for="item-par">Par:</label>
+      <input type="number" name="par" id="item-par"><br><br>
+
+      <input type="submit" value="Create Item">
+
+    </form>
+
+    <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
+    <script type="application/javascript" src="src/item.js" charset="UTF-8"></script>
+    <script type="application/javascript" src="src/department.js" charset="UTF-8"></script>
   </body>
 </html>

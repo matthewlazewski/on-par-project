@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded",() => {
 function navigate(){
   switch(true) {
     case (event.target.id === "departments-nav"):
-      container.innerHTML = "poop"
+      container.innerHTML = ""
       Department.fetchDepartments()
       break;
     case (event.target.id === "items-nav"):

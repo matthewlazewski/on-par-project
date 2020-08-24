@@ -6,7 +6,7 @@ class Item {
     }
 
     static fetchItems(){
-        fetch(`${baseURL}/items`)
+        fetch(`${BACKEND_URL}/items`)
             .then(resp => resp.json())
             .then(addItems)
     }

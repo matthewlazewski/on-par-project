@@ -13,7 +13,15 @@ class Department {
                 this.renderDepts()
                 departments.forEach(d => { 
                     let dept = new Department(d)
-                    this.departmentRow.innerHTML += dept.renderDeptPage()
+                    this.departmentRow.innerHTML +=  `
+                    <div class="dept-page">
+                        <h2 class="dept-name">${this.name}</h2>
+                    </div>
+                    
+                    <div class="dept-items">
+                        <h4 class="dept-item-title">Total Items</h4>
+                        <h3 class="dept-item-number">${this.items}
+                    </div>`
                 })
             })
     }
@@ -56,7 +64,7 @@ class Department {
         container.appendChild(this.departmentRow)
 
         this.newDeptRow.innerHTML = `
-        <button type="button" class="btn btn-block btn-outline-primary ml-auto" id="add-league">Add League</button>
+        <button type="button" class="btn btn-block btn-outline-primary ml-auto" id="add-league">Add Department</button>
         `
     }
 }

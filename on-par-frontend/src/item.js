@@ -79,6 +79,40 @@ class Item {
     
     }
 
+    static newItemForm(){
+        return `
+            <ul id="items">
+
+            </ul>
+        
+            <h3>Add Item</h3>
+                <form id="item-form">
+                <label for="item-name">Name:</label>
+                <input type="text" name="name" id="item-name"><br><br>
+                <label for="department_id">Department:</label>
+                <select name="department" id="department_id" required>
+                    <option value="">Select a Department</option>
+                </select>
+                <label for="item-on-hand">On Hand:</label>
+                <input type="number" name="on-hand" id="item-on-hand"><br><br>
+                <label for="item-par">Par:</label>
+                <input type="number" name="par" id="item-par"><br><br>
+            
+                <input type="submit" value="Create Item">
+        
+            </form>
+        `
+    }
+
+    static newItemFormListener(){
+        let itemForm = document.querySelector("#item-form")
+
+        itemForm.addEventListener("submit",() => {
+            event.preventDefault()
+            this.createNewItem()
+        })
+    }
+
     itemPage(){
 
         return `

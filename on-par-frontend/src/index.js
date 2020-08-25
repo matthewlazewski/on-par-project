@@ -4,7 +4,7 @@ const container = document.querySelector(".selected-list")
 
 document.addEventListener("DOMContentLoaded",() => {
   navBar.addEventListener("click", navigate)
-  Department.fetchDepartments()
+  DepartmentsAdapter.fetchDepartments()
 })
 
 function navigate(){

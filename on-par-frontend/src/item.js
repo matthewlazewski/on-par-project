@@ -120,6 +120,7 @@ class Item {
         <div id= "${this.id}">
             <li>
                 <span class="name">Item Name: ${this.name.attributes.name}</span><br>
+                <span class="department">Department: ${this.name.relationships.department.data.id} </span><br>
                 <span class="name">On Hand: ${this.name.attributes.on_hand}</span><br>
                 <span class="name">Par: ${this.name.attributes.par}</span>
             </li>

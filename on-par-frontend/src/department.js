@@ -2,8 +2,10 @@ class Department {
     static newDeptRow = document.createElement("div")
     static departmentRow = document.createElement("div")
 
-    constructor({name}){
+    constructor({id, name, items}){
+        this.id = id;
         this.name = name;
+        this.items = items;
     }
 
     static fetchDepartments(){
@@ -12,6 +14,7 @@ class Department {
             .then((response) => {
                 this.renderDepts()
                 response.data.forEach(dept => {
+                    
                     container.innerHTML += 
                     `
                     <div class="dept-page">
@@ -20,7 +23,7 @@ class Department {
                     
                     <div class="dept-items">
                         <h4 class="dept-item-title">Total Items</h4>
-                        <h3 class="dept-item-number">${dept.relationships.items.length || 0}</h3
+                        <h3 class="dept-item-number">${dept.relationships.items.data.length}</h3
                     </div>`
                 })
             })

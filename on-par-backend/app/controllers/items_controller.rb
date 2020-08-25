@@ -31,7 +31,8 @@ class ItemsController < ApplicationController
         render json: ItemSerializer.new(item)
     end
 
+    private 
     def item_params
-        params.require(:item).permit(:name, :on_hand, :par)
+        params.require(:item).permit(:name, :on_hand, :par, :department_id)
     end
 end

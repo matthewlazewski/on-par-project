@@ -22,5 +22,7 @@ class Item {
             })
     }
 
+    static create
+
     
 };

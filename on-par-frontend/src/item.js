@@ -54,15 +54,6 @@ class Item {
             })
     }
 
-    static newItemEventListener(){
-        let newItemButton = document.querySelector("#add-item")
-        newItemButton.addEventListener("click", () => {
-            event.preventDefault()
-
-        })
-    }
-
-
     static renderItems(){
         this.newItemRow.id = "new-item-row"
         this.newItemRow.class = "row"
@@ -76,6 +67,7 @@ class Item {
 
         this.newItemRow.innerHTML = `
             <button type ="button" class="button" id="new-item">Add Item</button>`
+        this.newItemEventListener()
     
     }
 
@@ -92,16 +84,26 @@ class Item {
                 <label for="department_id">Department:</label>
                 <select name="department" id="department_id" required>
                     <option value="">Select a Department</option>
-                </select>
+                </select><br><br>
                 <label for="item-on-hand">On Hand:</label>
                 <input type="number" name="on-hand" id="item-on-hand"><br><br>
                 <label for="item-par">Par:</label>
                 <input type="number" name="par" id="item-par"><br><br>
             
                 <input type="submit" value="Create Item">
-        
+                <br>
             </form>
         `
+    }
+
+    static newItemEventListener(){
+        let newItemButton = document.querySelector("#new-item")
+        newItemButton.addEventListener("click", () => {
+            event.preventDefault()
+
+            event.target.parentNode.insertAdjacentHTML('beforeend',this.newItemForm())
+            this.newItemFormListener
+        })
     }
 
     static newItemFormListener(){
@@ -114,7 +116,7 @@ class Item {
     }
 
     itemPage(){
-
+        debugger
         return `
         <div id= "${this.id}">
             <li>

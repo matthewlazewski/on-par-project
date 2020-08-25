@@ -116,7 +116,6 @@ class Item {
     }
 
     itemPage(){
-        debugger
         return `
         <div id= "${this.id}">
             <li>
@@ -124,6 +123,7 @@ class Item {
                 <span class="name">On Hand: ${this.name.attributes.on_hand}</span><br>
                 <span class="name">Par: ${this.name.attributes.par}</span>
             </li>
+            <br>
         `
     }
     

@@ -10,6 +10,7 @@ class Department {
         fetch(`${BACKEND_URL}/departments`)
             .then(resp => resp.json())          
             .then((response) => {
+                this.renderDepts()
                 response.data.forEach(dept => {
                     container.innerHTML += 
                     `
@@ -68,7 +69,7 @@ class Department {
         container.appendChild(this.departmentRow)
 
         this.newDeptRow.innerHTML = `
-        <button type="button" class="btn btn-block btn-outline-primary ml-auto" id="add-league">Add Department</button>
+        <button type="button" class="button">Add Department</button>
         `
     }
 }

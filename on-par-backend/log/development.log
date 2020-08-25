@@ -1869,3 +1869,323 @@ Processing by DepartmentsController#index as */*
 Completed 200 OK in 138ms (Views: 31.9ms | ActiveRecord: 97.8ms | Allocations: 8909)
 
 
+Started GET "/departments" for ::1 at 2020-08-25 13:47:51 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (13.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 71ms (Views: 47.4ms | ActiveRecord: 19.6ms | Allocations: 4347)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:47:55 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 36ms (Views: 24.3ms | ActiveRecord: 1.1ms | Allocations: 5281)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:49:41 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (3.9ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 33.4ms | ActiveRecord: 7.0ms | Allocations: 4260)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:49:42 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (1.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 2.5ms | Allocations: 4260)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:50:08 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (2.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (11.9ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 38.2ms | ActiveRecord: 16.2ms | Allocations: 4261)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:50:13 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 2.0ms | Allocations: 4260)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:50:40 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (4.9ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 62.0ms | ActiveRecord: 10.4ms | Allocations: 4260)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:53:07 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (1.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 54ms (Views: 43.4ms | ActiveRecord: 3.2ms | Allocations: 4260)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:53:28 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (2.9ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 19.0ms | ActiveRecord: 18.4ms | Allocations: 4260)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:53:32 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.6ms | Allocations: 985)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:53:39 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (2.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 28.1ms | ActiveRecord: 9.7ms | Allocations: 4260)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:53:42 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.0ms | Allocations: 985)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:54:34 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (1.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (11.8ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 68ms (Views: 46.5ms | ActiveRecord: 17.4ms | Allocations: 4260)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:55:27 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.7ms | Allocations: 985)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:55:27 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 1.0ms | Allocations: 985)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:55:28 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (3.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 3.7ms | Allocations: 985)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:57:50 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (5.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 76ms (Views: 52.3ms | ActiveRecord: 8.5ms | Allocations: 4260)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:57:52 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 985)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:58:34 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (1.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (20.2ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 178ms (Views: 154.7ms | ActiveRecord: 22.7ms | Allocations: 4263)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:58:35 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (9.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 9.1ms | Allocations: 985)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:58:36 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 985)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:58:36 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (22.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 3.4ms | ActiveRecord: 22.7ms | Allocations: 988)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:58:36 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (3.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 3.3ms | Allocations: 985)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:58:45 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (1.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 21.3ms | ActiveRecord: 2.4ms | Allocations: 4260)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:58:48 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 985)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 13:59:17 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (0.8ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 16.1ms | ActiveRecord: 8.9ms | Allocations: 4260)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:59:18 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.9ms | Allocations: 985)
+
+
+Started GET "/items" for ::1 at 2020-08-25 13:59:23 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.9ms | Allocations: 985)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 14:00:20 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (20.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 83ms (Views: 52.7ms | ActiveRecord: 26.4ms | Allocations: 4260)
+
+
+Started GET "/items" for ::1 at 2020-08-25 14:00:21 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 3.1ms | Allocations: 985)
+
+
+Started GET "/departments" for ::1 at 2020-08-25 14:01:03 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 14.0ms | ActiveRecord: 7.9ms | Allocations: 4260)
+
+
+Started GET "/items" for ::1 at 2020-08-25 14:01:04 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 985)
+
+

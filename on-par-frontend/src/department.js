@@ -2,29 +2,16 @@ class Department {
     static newDeptRow = document.createElement("div")
     static departmentRow = document.createElement("div")
 
-    constructor(name){
+    constructor({name}){
         this.name = name;
     }
 
     static fetchDepartments(){
         fetch(`${BACKEND_URL}/departments`)
-            .then(resp => resp.json())
-            .then(departments => {
-                this.renderDepts()
-                departments.forEach(d => { 
-                    let dept = new Department(d)
-                    this.departmentRow.innerHTML +=  `
-                    <div class="dept-page">
-                        <h2 class="dept-name">${this.name}</h2>
-                    </div>
-                    
-                    <div class="dept-items">
-                        <h4 class="dept-item-title">Total Items</h4>
-                        <h3 class="dept-item-number">${this.items}
-                    </div>`
-                })
-            })
-    }
+            .then(resp => resp.json())          
+            .then(addDepts)
+        }
+    
 
     static fetchDepartment(departmentId){
         fetch(`${BACKEND_URL}/departments/${departmentId}`)

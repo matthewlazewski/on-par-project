@@ -5,7 +5,7 @@ class DepartmentsController < ApplicationController
         options = {
             inlcude: [:items]
         }
-        render json: departments 
+        render json: DepartmentSerializer.new(departments)
     end
 
     def show 

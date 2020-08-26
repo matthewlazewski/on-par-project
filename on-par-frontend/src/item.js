@@ -50,7 +50,7 @@ class Item {
     
     }
 
-    static newItemForm(){
+    newItemForm(){
         return `
             <ul id="items">
 
@@ -75,12 +75,12 @@ class Item {
         `
     }
 
-    static newItemEventListener(){
-        let newItemButton = document.querySelector("#new-item")
+    newItemEventListener(){
+        const newItemButton = document.getElementById("new-item-button")
         newItemButton.addEventListener("click", () => {
             event.preventDefault()
-
-            event.target.parentNode.insertAdjacentHTML('beforeend',this.newItemForm())
+            newItemButton.hidden = true 
+            container.innerHTML = this.newItemForm()
             this.newItemFormListener
         })
     }
@@ -95,7 +95,7 @@ class Item {
     }
 
     fullRender(){
-        container.innerHTML +=
+        this.element.innerHTML +=
             `<div id= "${this.id}">
                 <li>
                     <span class="name">Item Name: ${this.name}</span><br>
@@ -104,7 +104,9 @@ class Item {
                     <span class="order">To Order: ${this.par - this.on_hand}</span>
                 </li>
                 <br>
-              `
+            </div>
+            `
+        return this.element
     }
     
 };

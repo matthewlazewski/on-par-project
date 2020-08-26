@@ -17,6 +17,7 @@ class ItemsAdapter{
         let i = new Item({id: resp.id, ...resp.attributes})
         i.renderItems()
         i.attachToDom()
+        i.newItemEventListener()
     }
 
     createItem(event){

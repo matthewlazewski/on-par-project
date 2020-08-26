@@ -31,11 +31,42 @@ class Item {
     }
 
     addEventListeners(){
-        container.addEventListener('click', this.handleListClick)
+        container.addEventListener('click', this.editAndDeleteClick)
     }
 
-    handleListClick = (e) => {
-        
+    static findById(id){
+        return Item.all.find((item) => item.id == id)
+    }
+
+    editAndDeleteClick = (e) => {
+        if(e.target.className === "delete"){
+            let id = e.target.dataset.id 
+            itemsAdapter.deleteItem(id)
+            this.element.remove()
+        } else if(e.target.className === "update") {
+            let id = e.target.dataset.id 
+            e.target.className = "save"
+            e.target.innerText = "Save"
+            this.renderEditForm(id)
+        } else if(e.target.className === "save"){
+            let id = e.target.dataset.id 
+            e.target.className = "update"
+            e.target.innerText = "Update"
+            itemsAdapter.updateItem(id)
+        }
+    }
+
+    renderEditForm(id){
+        let item = Item.findById(id)
+
+        let editForm = document.createElement('div')
+        editForm.id = `update-form-${id}`
+        editForm.innerHTML = `
+        <input type="text" value="${item.name}" name="name">
+        <input type="number" value="${item.name}" name="on_hand">
+        <input type="number" value="${item.name}" name="par">`
+
+        item.element.querySelector('li').append(editForm)
     }
 
     attachToDom(){
@@ -73,8 +104,8 @@ class Item {
                 <label for="item-name">Name:</label>
                 <input type="text" name="name" id="item-name"><br><br>
                 <label for="department_id">Department:</label>
-                <select name="department" id="department_id" required>
-                    <option value="${this.departments}">Select a Department</option>
+                <select name="department" id="department_id" >
+                    ${this.dropDownMenu}
                 </select><br><br>
                 <label for="item-on-hand">On Hand:</label>
                 <input type="number" name="on-hand" id="item-on-hand"><br><br>

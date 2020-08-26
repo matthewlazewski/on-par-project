@@ -44,9 +44,11 @@ class ItemsAdapter{
 
         fetch(this.baseUrl, configObj)
             .then(resp => resp.json())
-            .then(json => {
+            .then(json => { 
                 let item = new Item(json.data.attributes)
+                item.renderItems()
                 item.attachToDom()
+                item.newItemEventListener()
             })
             
     }

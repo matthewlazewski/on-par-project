@@ -2,6 +2,12 @@ li {
     list-style: none;
 }
 
+form {
+    padding: 15px;
+    width: 100%;
+    background-color: rgba(236, 236, 236, 0.897);
+}
+
 .heading {
     text-align: center;
 }

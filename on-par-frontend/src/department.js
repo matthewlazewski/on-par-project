@@ -14,16 +14,16 @@ class Department {
         Department.all.push(this) 
     }
 
+    items(){
+        return Item.all.filter((item) => item.department_id === this.id) 
+    }
      
 
     renderDeptPage(){
         container.innerHTML += 
-            `<h2>${this.name}</h2>`
+            `<h2>${this.name}</h2>
+            <p>${this.items()}`
         return this.element       
-    }
-
-    items(){
-        return Item.all.filter((item) => item.department_id === this.id) 
     }
 
     attachToDom(){

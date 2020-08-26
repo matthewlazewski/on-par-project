@@ -95,7 +95,6 @@ class ItemsAdapter{
             .then(json => {
                 alert(json.message)
             })
-        }
     
     }
 }

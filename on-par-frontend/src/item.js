@@ -17,6 +17,11 @@ class Item {
         Item.all.push(this)
     }
 
+    get departments(){
+        debugger
+        return Department.all.forEach(dept =>  dept.name)
+    }
+
     get department(){
         return Department.all.find((dept) => dept.id === this.department_id)
     }
@@ -62,7 +67,7 @@ class Item {
                 <input type="text" name="name" id="item-name"><br><br>
                 <label for="department_id">Department:</label>
                 <select name="department" id="department_id" required>
-                    <option value="">Select a Department</option>
+                    <option value="${this.departments}">Select a Department</option>
                 </select><br><br>
                 <label for="item-on-hand">On Hand:</label>
                 <input type="number" name="on-hand" id="item-on-hand"><br><br>
@@ -74,6 +79,8 @@ class Item {
             </form>
         `
     }
+
+
 
     newItemEventListener(){
         const newItemButton = document.getElementById("new-item-button")
@@ -99,7 +106,7 @@ class Item {
             `<div id= "${this.id}">
                 <li>
                     <span class="name">Item Name: ${this.name}</span><br>
-                    <span class="name">Item Name: ${this.department}</span><br>
+                    <span class="name">Department: ${this.department}</span><br>
                     <span class="name">On Hand: ${this.on_hand}</span><br>
                     <span class="name">Par: ${this.par}</span><br>
                     <span class="order">To Order: ${this.par - this.on_hand}</span>

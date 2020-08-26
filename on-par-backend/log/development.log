@@ -3529,3 +3529,38 @@ Processing by ItemsController#index as */*
 Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 4.7ms | Allocations: 1683)
 
 
+Started GET "/departments" for ::1 at 2020-08-25 18:59:46 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (24.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 74ms (Views: 43.2ms | ActiveRecord: 28.0ms | Allocations: 4467)
+
+
+Started GET "/items" for ::1 at 2020-08-25 19:32:51 -0500
+Started GET "/departments" for ::1 at 2020-08-25 19:32:51 -0500
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as */*
+Processing by DepartmentsController#index as */*
+  [1m[36mItem Load (9.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+  [1m[36mDepartment Load (2.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 65ms (Views: 16.0ms | ActiveRecord: 40.4ms | Allocations: 10089)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 109ms (Views: 46.1ms | ActiveRecord: 54.8ms | Allocations: 16890)
+
+

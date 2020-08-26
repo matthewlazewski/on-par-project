@@ -1,4 +1,6 @@
 class Department {
+    static all = [];
+    
     static newDeptRow = document.createElement("div")
     static departmentRow = document.createElement("div")
 
@@ -6,6 +8,11 @@ class Department {
         this.id = id;
         this.name = name;
         this.items = items;
+        this.element = document.createElement('li')
+        this.element.id = `department-${id}`
+
+        Department.all.push(this) 
+
     }
 
     static fetchDepartments(){
@@ -15,19 +22,14 @@ class Department {
                 this.renderDepts()
                 response.data.forEach(dept => {
                     
-                    container.innerHTML += 
-                    `
-                    <div class="dept-page">
-                        <h2 class="dept-name">${dept.attributes.name}</h2>
-                    </div>
-                    
-                    <div class="dept-items">
-                        <h4 class="dept-item-title">Total Items</h4>
-                        <h3 class="dept-item-number">${dept.relationships.items.data.length}</h3
-                    </div>`
+                
                 })
             })
         }
+
+    items(){
+        return Item.all.filter((item) => item.department_id === this.id) 
+    }
     
 
     // static fetchDepartment(departmentId){
@@ -48,7 +50,7 @@ class Department {
     }
 
     static renderDeptPage(){
-        container.innerHTML += 
+        this.element.innerHTML += 
             `
             <div class="dept-page">
                 <h2 class="dept-name">${this.name}</h2>

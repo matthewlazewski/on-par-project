@@ -1,12 +1,16 @@
 class Item {
     static newItemRow  = document.createElement("div")
     static itemRow = document.createElement("div")
+    static all = []
 
-    constructor(name,on_hand,par, department_id){
+    constructor({name,on_hand,par, department_id}){
         this.name = name;
         this.on_hand = on_hand;
         this.par = par;
-        this.department_id = department_id
+        this.id = id;
+        this.department_id = department_id;
+
+        Item.all.push(this)
     }
 
     static fetchItems(){
@@ -19,6 +23,10 @@ class Item {
                     this.itemRow.innerHTML += newItem.itemPage()
                 })
             })
+    }
+
+    get department(){
+        return Department.all.find((dept) => dept.id === item.department_id)
     }
 
 

@@ -1,30 +1,22 @@
 class DepartmentsAdapter{
     constructor(){
-
+        this.baseUrl = "http://localhost:3000/departments"
     }
 
     static fetchDepartments(){
-        fetch(`${BACKEND_URL}/departments`)
+        fetch(this.baseUrl)
             .then(resp => resp.json())          
-            .then((response) => {
+            .then((response) => {  
                 this.renderDepts()
                 response.data.forEach(dept => {
-                    
-                    container.innerHTML += 
-                    `
-                    <div class="dept-page">
-                        <h2 class="dept-name">${dept.attributes.name}</h2>
-                    </div>
-                    
-                    <div class="dept-items">
-                        <h4 class="dept-item-title">Total Items</h4>
-                        <h3 class="dept-item-number">${dept.relationships.items.data.length}</h3
-                    </div>`
+                    this.sanitizeDepartment(dept)
+                    dept.fullRender()
                 })
             })
     }
 
     sanitizeDepartment(resp){
-        
+        let dept = new Department({id: resp.id, ...resp.attributes})
+        dept.attachToDom()
     }
 }

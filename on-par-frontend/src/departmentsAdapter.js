@@ -9,7 +9,6 @@ class DepartmentsAdapter{
             .then((response) => {  
                 response.data.forEach(dept => {
                     this.sanitizeDepartment(dept)
-                    dept.renderDeptPage
                 })
             })
     }

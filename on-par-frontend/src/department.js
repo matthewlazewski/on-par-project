@@ -29,8 +29,8 @@ class Department {
             </div>
             
             <div class="dept-items">
-                <h4 class="dept-item-title">Total Items</h4>
-                <h3 class="dept-item-number">${this}
+                <h4 class="dept-item-title">Items</h4>
+                <h3 class="dept-item-number">${this.items()} </h3
             </div>`
         return this.element 
             

@@ -99,11 +99,14 @@ class Item {
             `<div id= "${this.id}">
                 <li>
                     <span class="name">Item Name: ${this.name}</span><br>
+                    <span class="name">Item Name: ${this.department}</span><br>
                     <span class="name">On Hand: ${this.on_hand}</span><br>
                     <span class="name">Par: ${this.par}</span><br>
                     <span class="order">To Order: ${this.par - this.on_hand}</span>
                 </li>
-                <br>
+                    <button class="update">Edit Item</button>
+                    <button class="delete">Delete Item</button>
+                <br><br>
             </div>
             `
         return this.element

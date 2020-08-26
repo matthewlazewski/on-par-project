@@ -36,6 +36,7 @@ class Item {
     attachToDom(){
         container.append(this.fullRender())
         this.addEventListeners()
+        this.itemList.hidden = false 
     }
 
     renderItems(){
@@ -46,9 +47,6 @@ class Item {
 
         container.appendChild(this.element)
         // container.appendChild(this.itemRow)
-
-        this.element.innerHTML = `
-            <button type ="button" class="button" id="new-item">Add Item</button>`
     
     }
 

@@ -4,44 +4,16 @@ class Department {
     static newDeptRow = document.createElement("div")
     static departmentRow = document.createElement("div")
 
-    constructor({id, name, items}){
+    constructor({id, name}){
         this.id = id;
         this.name = name;
-        this.items = items;
         this.element = document.createElement('li')
         this.element.id = `department-${id}`
+        this.departmentList = document.getElementById('department-list')
 
         Department.all.push(this) 
 
     }
-
-    static fetchDepartments(){
-        fetch(`${BACKEND_URL}/departments`)
-            .then(resp => resp.json())          
-            .then((response) => {
-                this.renderDepts()
-                response.data.forEach(dept => {
-                    
-                
-                })
-            })
-        }
-
-    items(){
-        return Item.all.filter((item) => item.department_id === this.id) 
-    }
-    
-
-    // static fetchDepartment(departmentId){
-    //     fetch(`${BACKEND_URL}/departments/${departmentId}`)
-    //         .then(resp => resp.json())
-    //         .then(department => {
-    //             container.innerHTML=""
-
-    //             let dept = new Department(department)
-    //             this.departmentRow.innerHTML += dept.renderDept()
-    //         })
-    // }
 
     addDepts(response){
         response.data.forEach(dept => {
@@ -49,7 +21,7 @@ class Department {
         });
     }
 
-    static renderDeptPage(){
+    renderDeptPage(){
         this.element.innerHTML += 
             `
             <div class="dept-page">
@@ -60,21 +32,24 @@ class Department {
                 <h4 class="dept-item-title">Total Items</h4>
                 <h3 class="dept-item-number">${this}
             </div>`
+        return this.element 
             
     }
 
-    static renderDepts(){
-        this.newDeptRow.innerHTML = ""
-        this.newDeptRow.className = "new-dept-row"
-        
-        this.departmentRow.innerHTML = ""
-        this.departmentRow.className = "dept-row"
-
-        container.appendChild(this.newDeptRow)
-        container.appendChild(this.departmentRow)
-
-        this.newDeptRow.innerHTML = `
-        <button type="button" class="button">Add Department</button>
-        `
+    items(){
+        return Item.all.filter((item) => item.department_id === this.id) 
     }
+
+    attachToDom(){
+        this.departmentList.append(this.renderDeptPage())
+        this.element.addEventListener('click', this.displayItems)
+    }
+
+    displayItems = () => {
+        document.getElementById('item-list').innerHTML = ''
+        this.items().forEach((item) => {
+            item.attachToDom
+        })
+    }
+
 }

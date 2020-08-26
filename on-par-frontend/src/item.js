@@ -3,7 +3,7 @@ class Item {
     static itemRow = document.createElement("div")
     static all = []
 
-    constructor({name,on_hand,par, department_id}){
+    constructor({id, name,on_hand,par, department_id}){
         this.name = name;
         this.on_hand = on_hand;
         this.par = par;

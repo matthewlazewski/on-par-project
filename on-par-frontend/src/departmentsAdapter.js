@@ -3,14 +3,13 @@ class DepartmentsAdapter{
         this.baseUrl = "http://localhost:3000/departments"
     }
 
-    static fetchDepartments(){
+    fetchDepartments(){
         fetch(this.baseUrl)
             .then(resp => resp.json())          
             .then((response) => {  
-                this.renderDepts()
                 response.data.forEach(dept => {
                     this.sanitizeDepartment(dept)
-                    dept.fullRender()
+                    dept.renderDeptPage
                 })
             })
     }

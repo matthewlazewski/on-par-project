@@ -17,7 +17,7 @@ class Department {
      
 
     renderDeptPage(){
-        this.element.innerHTML += 
+        container.innerHTML += 
             `<h2>${this.name}</h2>`
         return this.element       
     }

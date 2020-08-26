@@ -1,5 +1,6 @@
 class Item {
     static newItemRow  = document.createElement("div")
+    static itemRow = document.createElement("div")
     static itemList = document.createElement("list")
     static all = []
 
@@ -17,7 +18,7 @@ class Item {
     }
 
     get department(){
-        return Department.all.find((dept) => dept.id === item.department_id)
+        return Department.all.find((dept) => dept.id === this.department_id)
     }
 
     get itemList(){
@@ -25,32 +26,29 @@ class Item {
     }
 
     addEventListeners(){
-        this.element.addEventListener('click', this.handleListClick)
+        container.addEventListener('click', this.handleListClick)
     }
 
     handleListClick = (e) => {
-        console.log("clicking")
+        
     }
 
     attachToDom(){
-        this.itemList.append(this.fullRender())
+        container.append(this.fullRender())
         this.addEventListeners()
     }
 
-    static renderItems(){
-        this.newItemRow.id = "new-item-row"
-        this.newItemRow.class = "row"
-        this.newItemRow.innerHTML = ""
+    renderItems(){
+        this.element.innerHTML = ""
 
-        this.itemRow.class = "item-rows"
-        this.itemRow.innerHTML = ""
+        // this.itemRow.class = "item-rows"
+        // this.itemRow.innerHTML = ""
 
-        container.appendChild(this.newItemRow)
-        container.appendChild(this.itemRow)
+        container.appendChild(this.element)
+        // container.appendChild(this.itemRow)
 
-        this.newItemRow.innerHTML = `
+        this.element.innerHTML = `
             <button type ="button" class="button" id="new-item">Add Item</button>`
-        this.newItemEventListener()
     
     }
 
@@ -99,17 +97,16 @@ class Item {
     }
 
     fullRender(){
-        this.element.innerHTML =
+        container.innerHTML +=
             `<div id= "${this.id}">
                 <li>
                     <span class="name">Item Name: ${this.name}</span><br>
-                    <span class="department">Department: ${this.department} </span><br>
                     <span class="name">On Hand: ${this.on_hand}</span><br>
-                    <span class="name">Par: ${this.par}</span>
+                    <span class="name">Par: ${this.par}</span><br>
+                    <span class="order">To Order: ${this.par - this.on_hand}</span>
                 </li>
                 <br>
-            `
-        return this.element
+              `
     }
     
 };

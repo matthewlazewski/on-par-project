@@ -15,6 +15,7 @@ function navigate(){
       container.innerHTML = ""
       departmentsAdapter.fetchDepartments()
       break;
+      newItemButton.hidden = true 
     case (event.target.id === "items-nav"):
       container.innerHTML = ""
       itemsAdapter.fetchItems()

@@ -96,7 +96,7 @@ class ItemsAdapter{
             fetch(`http://localhost:3000/items/${id}`, configObj)
             .then(res => res.json())
             .then(json => {
-                alert("Item Deleted")
+                this.fetchItems
             })
     
     }

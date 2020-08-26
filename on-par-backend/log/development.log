@@ -5041,3 +5041,284 @@ Processing by ItemsController#index as */*
 Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.4ms | Allocations: 1683)
 
 
+Started GET "/items" for ::1 at 2020-08-26 14:25:30 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.9ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:27:01 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 1.0ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:29:17 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.8ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:29:30 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 2.1ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:29:44 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 1.0ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:29:55 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 2.8ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:32:18 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 14.5ms | ActiveRecord: 1.2ms | Allocations: 1682)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:32:27 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.6ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:34:19 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.9ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:35:19 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 12.7ms | ActiveRecord: 1.0ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:38:27 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 117ms (Views: 113.2ms | ActiveRecord: 1.1ms | Allocations: 1686)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:39:04 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.4ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:39:23 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (4.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 4.6ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:44:57 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 1.1ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:51:46 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (7.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 11.2ms | ActiveRecord: 7.1ms | Allocations: 1756)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:52:44 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 2.0ms | Allocations: 1683)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:53:22 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 1683)
+
+
+Started POST "/items" for ::1 at 2020-08-26 14:53:31 -0500
+Processing by ItemsController#create as JSON
+  Parameters: {"name"=>"Xbox", "onHand"=>"4", "par"=>"49", "item"=>{"name"=>"Xbox", "par"=>"49"}}
+Completed 200 OK in 91ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4937)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:53:54 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1685)
+
+
+Started POST "/items" for ::1 at 2020-08-26 14:53:59 -0500
+Processing by ItemsController#create as JSON
+  Parameters: {"name"=>"Xbox", "onHand"=>"4", "par"=>"4", "item"=>{"name"=>"Xbox", "par"=>"4"}}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 642)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:55:57 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 97ms (Views: 20.0ms | ActiveRecord: 65.1ms | Allocations: 7080)
+
+
+Started POST "/items" for ::1 at 2020-08-26 14:56:03 -0500
+Processing by ItemsController#create as JSON
+  Parameters: {"name"=>"Xbox", "onHand"=>"4", "par"=>"44", "item"=>{"name"=>"Xbox", "par"=>"44"}}
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms | Allocations: 1327)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:56:39 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 20.1ms | ActiveRecord: 8.4ms | Allocations: 7009)
+
+
+Started POST "/items" for ::1 at 2020-08-26 14:56:46 -0500
+Processing by ItemsController#create as JSON
+  Parameters: {"name"=>"Xbox", "onHand"=>"8", "par"=>"88", "item"=>{"name"=>"Xbox", "par"=>"88"}}
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1581)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:56:55 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 2.1ms | Allocations: 1685)
+
+
+Started POST "/items" for ::1 at 2020-08-26 14:57:32 -0500
+Processing by ItemsController#create as JSON
+  Parameters: {"name"=>"Ice Cream", "onHand"=>"4", "par"=>"44", "item"=>{"name"=>"Ice Cream", "par"=>"44"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 790)
+
+
+Started GET "/items" for ::1 at 2020-08-26 14:59:57 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 1.5ms | Allocations: 1685)
+
+
+Started POST "/items" for ::1 at 2020-08-26 15:00:08 -0500
+Processing by ItemsController#create as JSON
+  Parameters: {"name"=>"Oranges", "onHand"=>"44", "par"=>"66", "item"=>{"name"=>"Oranges", "par"=>"66"}}
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 788)
+
+
+Started GET "/items" for ::1 at 2020-08-26 15:00:20 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (7.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 4.9ms | ActiveRecord: 7.3ms | Allocations: 1683)
+
+
+Started DELETE "/items/undefined" for ::1 at 2020-08-26 15:00:34 -0500
+Started DELETE "/items/undefined" for ::1 at 2020-08-26 15:00:34 -0500
+Started DELETE "/items/undefined" for ::1 at 2020-08-26 15:00:34 -0500
+Started DELETE "/items/undefined" for ::1 at 2020-08-26 15:00:34 -0500
+Started DELETE "/items/undefined" for ::1 at 2020-08-26 15:00:34 -0500
+Processing by ItemsController#destroy as JSON
+  Parameters: {"id"=>"undefined", "item"=>{}}
+Processing by ItemsController#destroy as JSON
+  Parameters: {"id"=>"undefined", "item"=>{}}
+Processing by ItemsController#destroy as JSON
+  Parameters: {"id"=>"undefined", "item"=>{}}
+Processing by ItemsController#destroy as JSON
+  Parameters: {"id"=>"undefined", "item"=>{}}
+  [1m[36mItem Load (3.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Processing by ItemsController#destroy as JSON
+  Parameters: {"id"=>"undefined", "item"=>{}}
+  ↳ app/controllers/items_controller.rb:25:in `destroy'
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 94ms (ActiveRecord: 5.5ms | Allocations: 11251)
+
+
+  ↳ app/controllers/items_controller.rb:25:in `destroy'
+  [1m[36mItem Load (8.9ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 25ms (ActiveRecord: 6.0ms | Allocations: 2418)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=undefined):
+  
+app/controllers/items_controller.rb:25:in `destroy'
+  [1m[36mItem Load (9.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:25:in `destroy'
+  ↳ app/controllers/items_controller.rb:25:in `destroy'
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=undefined):
+  
+app/controllers/items_controller.rb:25:in `destroy'
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 77ms (ActiveRecord: 10.1ms | Allocations: 29155)
+
+
+Completed 404 Not Found in 93ms (ActiveRecord: 14.4ms | Allocations: 31780)
+
+
+  ↳ app/controllers/items_controller.rb:25:in `destroy'
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=undefined):
+  
+app/controllers/items_controller.rb:25:in `destroy'
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=undefined):
+  
+app/controllers/items_controller.rb:25:in `destroy'
+Completed 404 Not Found in 204ms (ActiveRecord: 9.7ms | Allocations: 55328)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=undefined):
+  
+app/controllers/items_controller.rb:25:in `destroy'
+Started GET "/departments" for ::1 at 2020-08-26 15:01:17 -0500
+Processing by DepartmentsController#index as */*
+  [1m[36mDepartment Load (8.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 1]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 2]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 3]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 4]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "items"."id" FROM "items" WHERE "items"."department_id" = $1[0m  [["department_id", 5]]
+  ↳ app/controllers/departments_controller.rb:8:in `index'
+Completed 200 OK in 66ms (Views: 32.4ms | ActiveRecord: 25.9ms | Allocations: 10629)
+
+
+Started GET "/items" for ::1 at 2020-08-26 15:01:21 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 1683)
+
+

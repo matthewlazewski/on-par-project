@@ -20,8 +20,7 @@ class ItemsAdapter{
         i.newItemEventListener()
     }
 
-    createItem(event){
-        event.preventDefault()
+    newItem(){
 
         const name = document.getElementById('item-name').value 
         const onHand = document.getElementById('item-on-hand').value
@@ -46,6 +45,11 @@ class ItemsAdapter{
             .then(resp => resp.json())
             .then(json => { 
                 console.log(json)
+                let item = new Item(json.data.attributes)
+                item.renderItems()
+                item.attachToDom()
+                let form = document.getElementById('item-form')
+                form.hidden = true 
             })
             
     }
@@ -92,7 +96,7 @@ class ItemsAdapter{
             fetch(`http://localhost:3000/items/${id}`, configObj)
             .then(res => res.json())
             .then(json => {
-                alert(json.message)
+                alert("Item Deleted")
             })
     
     }

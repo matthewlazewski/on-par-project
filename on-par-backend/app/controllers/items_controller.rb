@@ -12,11 +12,13 @@ class ItemsController < ApplicationController
 
     def create 
         item = Item.new(item_params)
-        if item.save
-            render json: ItemSerializer.new(item)
-        else 
-            render json: {error: "Please enter a valid item"}
-        end
+        item.save 
+        render json: ItemSerializer.new(item)
+        # if item.save
+        #     render json: ItemSerializer.new(item)
+        # else 
+        #     render json: {error: "Please enter a valid item"}
+        # end
     end
 
     def destroy

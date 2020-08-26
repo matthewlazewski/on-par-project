@@ -2,7 +2,6 @@ class Item {
     static newItemRow  = document.createElement("div")
     static itemRow = document.createElement("div")
     static itemList = document.createElement("list")
-    static createButton = document.getElementById("create-item-button")
     static all = []
 
     constructor({id, name,on_hand,par, department_id}){
@@ -19,7 +18,6 @@ class Item {
     }
 
     get departments(){
-        debugger
         return Department.all.forEach(dept =>  dept.name)
     }
 
@@ -117,27 +115,27 @@ class Item {
                 <br>
             </form>
         `
-        createButton.addEventListener("submit", () => console.log("hi"))
     }
-
 
 
     newItemEventListener(){
         const newItemButton = document.getElementById("new-item-button")
+        
         newItemButton.addEventListener("click", () => {
             event.preventDefault()
             newItemButton.hidden = true 
             container.innerHTML = this.newItemForm()
-            this.newItemFormListener
+            this.newItemFormListener()
         })
     }
 
-    static newItemFormListener(){
+    newItemFormListener(){
         let itemForm = document.querySelector("#item-form")
+        let itemAdapter = new ItemsAdapter;
 
-        itemForm.addEventListener("submit",() => {
+        itemForm.addEventListener("submit", () => {
             event.preventDefault()
-            this.createNewItem()
+            itemAdapter.newItem()
         })
     }
 

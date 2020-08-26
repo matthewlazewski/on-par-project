@@ -2,6 +2,7 @@ class Item {
     static newItemRow  = document.createElement("div")
     static itemRow = document.createElement("div")
     static itemList = document.createElement("list")
+    static createButton = document.getElementById("create-item-button")
     static all = []
 
     constructor({id, name,on_hand,par, department_id}){
@@ -112,10 +113,11 @@ class Item {
                 <label for="item-par">Par:</label>
                 <input type="number" name="par" id="item-par"><br><br>
             
-                <input type="submit" value="Create Item">
+                <input type="submit" id="create-item-button" value="Create Item">
                 <br>
             </form>
         `
+        createButton.addEventListener("submit", () => console.log("hi"))
     }
 
 

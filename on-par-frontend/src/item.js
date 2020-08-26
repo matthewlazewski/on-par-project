@@ -47,12 +47,19 @@ class Item {
     renderItems(){
         this.element.innerHTML = ""
 
-        // this.itemRow.class = "item-rows"
-        // this.itemRow.innerHTML = ""
-
         container.appendChild(this.element)
-        // container.appendChild(this.itemRow)
-    
+    }
+
+    dropDownMenu(){
+        const dropDown = document.querySelector("select")
+        const departments = Department.all 
+
+        for(let i = 0; i < departments.length; i++){
+            let dept = departments[i];
+            let option = document.createElement("option");
+            option.textContent = dept;
+            dropDown.appendChild(option)
+        }
     }
 
     newItemForm(){

@@ -30,7 +30,7 @@ class Item {
     }
 
     addEventListeners(){
-        container.addEventListener('click', this.editAndDeleteClick)
+        this.element.addEventListener('click', this.editAndDeleteClick)
     }
 
     static findById(id){
@@ -39,11 +39,10 @@ class Item {
 
     editAndDeleteClick = (e) => {
         if(e.target.className === "delete"){
-            let id = this.id 
+            let id = e.target.parentElement.id 
             itemsAdapter.deleteItem(id)
             this.element.remove()
         } else if(e.target.className === "update") {
-            let id = this.id 
             e.target.className = "save"
             e.target.innerText = "Save"
             this.renderEditForm(id)

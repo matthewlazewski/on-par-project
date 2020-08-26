@@ -15,14 +15,13 @@ class Department {
     }
 
     items(){
-        return Item.all.filter((item) => item.department_id === this.id) 
+        return Item.all.filter((item) => item.department_id === this.id)  
     }
-     
 
     renderDeptPage(){
-        container.innerHTML += 
+        this.element.innerHTML += 
             `<h2>${this.name}</h2>
-            <p>${this.items()}`
+            <p>${this.displayItems()}`
         return this.element       
     }
 

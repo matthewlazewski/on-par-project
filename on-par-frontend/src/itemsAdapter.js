@@ -54,10 +54,11 @@ class ItemsAdapter{
             
     }
 
-    updateItem(item) {
-        const name = document.getElementById(`update-price-${item}`).value 
-        const onHand = document.getElementById(`update-on-hand-${item}`).value
-        const par = document.getElementById(`update-par-${item}`).value
+    updateItem(itemId) {
+        debugger 
+        const name = document.getElementById(`update-price-${itemId}`).value 
+        const onHand = document.getElementById(`update-on-hand-${itemId}`).value
+        const par = document.getElementById(`update-par-${itemId}`).value
 
         let editObj = {
             name,
@@ -93,10 +94,10 @@ class ItemsAdapter{
                 }
             }
     
-            fetch(`http://localhost:3000/items/${id}`, configObj)
+            fetch(`http://localhost:3000/items/${id}, configObj`)
             .then(res => res.json())
             .then(json => {
-                this.fetchItems
+                
             })
     
     }

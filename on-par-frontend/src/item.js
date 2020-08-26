@@ -39,11 +39,11 @@ class Item {
 
     editAndDeleteClick = (e) => {
         if(e.target.className === "delete"){
-            let id = e.target.dataset.id 
+            let id = this.id 
             itemsAdapter.deleteItem(id)
             this.element.remove()
         } else if(e.target.className === "update") {
-            let id = e.target.dataset.id 
+            let id = this.id 
             e.target.className = "save"
             e.target.innerText = "Save"
             this.renderEditForm(id)
@@ -61,9 +61,9 @@ class Item {
         let editForm = document.createElement('div')
         editForm.id = `update-form-${id}`
         editForm.innerHTML = `
-        <input type="text" value="${item.name}" name="name">
-        <input type="number" value="${item.name}" name="on_hand">
-        <input type="number" value="${item.name}" name="par">`
+        <input type="text" id="update-name-${item.name}" value="${item.name}" name="name">
+        <input type="number" id="update-on-had-${item.on_hand}" value="${item.on_hand}" name="on_hand">
+        <input type="number" id= "update-par-${item.par}" value="${item.par}" name="par">`
 
         item.element.querySelector('li').append(editForm)
     }
@@ -81,18 +81,20 @@ class Item {
     }
 
     dropDownMenu(){
+        
         const dropDown = document.querySelector("select")
-        const departments = Department.all 
-
+        const depts = Department.all 
         for(let i = 0; i < departments.length; i++){
             let dept = departments[i];
             let option = document.createElement("option");
             option.textContent = dept;
             dropDown.appendChild(option)
         }
+        debugger 
     }
 
     newItemForm(){
+         
         return `
             <ul id="items">
 
@@ -119,8 +121,7 @@ class Item {
 
 
     newItemEventListener(){
-        const newItemButton = document.getElementById("new-item-button")
-        
+        const newItemButton = document.getElementById("new-item-button") 
         newItemButton.addEventListener("click", () => {
             event.preventDefault()
             newItemButton.hidden = true 

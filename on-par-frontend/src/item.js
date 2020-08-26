@@ -1,6 +1,6 @@
 class Item {
     static newItemRow  = document.createElement("div")
-    static itemRow = document.createElement("div")
+    static itemList = document.createElement("list")
     static all = []
 
     constructor({id, name,on_hand,par, department_id}){
@@ -10,56 +10,31 @@ class Item {
         this.id = id;
         this.department_id = department_id;
 
-        Item.all.push(this)
-    }
+        this.element = document.createElement('div')
+        this.element.id = `item-${this.id}`
 
-    static fetchItems(){
-        fetch(`${BACKEND_URL}/items`)
-            .then(resp => resp.json())
-            .then((response) => {
-                this.renderItems()
-                response.data.forEach(item => {
-                    let newItem = new Item(item)
-                    this.itemRow.innerHTML += newItem.itemPage()
-                })
-            })
+        Item.all.push(this)
     }
 
     get department(){
         return Department.all.find((dept) => dept.id === item.department_id)
     }
 
+    get itemList(){
+        return document.getElementById('item-list')
+    }
 
-    static createNewItem(){
-        let newItem = event.target 
-        let newItemRow = document.querySelector("#new-item-row")
+    addEventListeners(){
+        this.element.addEventListener('click', this.handleListClick)
+    }
 
-        let formData = {
-            name: form[0].value,
-            department_id: form[1].value,
-            on_hand: form[2].value,
-            par: form[3].value
-        }
+    handleListClick = (e) => {
+        console.log("clicking")
+    }
 
-        let configObj = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify(formData)
-        }
-
-        fetch(`${BACKEND_URL}/items`, configObj)
-            .then(resp => resp.json())
-            .then(item => {
-                form.parentNode.removeChild(form)
-
-                let itemRow = document.querySelector("#item-rows")
-
-                let newItem = new Item(item)
-                itemRow.innerHTML += newItem.itemPage()
-            })
+    attachToDom(){
+        this.itemList.append(this.fullRender())
+        this.addEventListeners()
     }
 
     static renderItems(){
@@ -123,17 +98,18 @@ class Item {
         })
     }
 
-    itemPage(){
-        return `
-        <div id= "${this.id}">
-            <li>
-                <span class="name">Item Name: ${this.name.attributes.name}</span><br>
-                <span class="department">Department: ${this.name.relationships.department.data.id} </span><br>
-                <span class="name">On Hand: ${this.name.attributes.on_hand}</span><br>
-                <span class="name">Par: ${this.name.attributes.par}</span>
-            </li>
-            <br>
-        `
+    fullRender(){
+        this.element.innerHTML =
+            `<div id= "${this.id}">
+                <li>
+                    <span class="name">Item Name: ${this.name}</span><br>
+                    <span class="department">Department: ${this.department} </span><br>
+                    <span class="name">On Hand: ${this.on_hand}</span><br>
+                    <span class="name">Par: ${this.par}</span>
+                </li>
+                <br>
+            `
+        return this.element
     }
     
 };

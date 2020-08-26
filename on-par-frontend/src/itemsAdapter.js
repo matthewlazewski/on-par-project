@@ -8,8 +8,13 @@ class ItemsAdapter{
         .then(resp => resp.json())
         .then(json => {
             json.data.forEach((item) => {
-                new Item(item.attributes) 
+                this.sanitizeItem(item)
             })
         })
+    }
+
+    sanitizeItem(resp){
+        let i = new Item({id: resp.id, ...resp.attributes})
+        i.attachToDom()
     }
 }

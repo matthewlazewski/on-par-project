@@ -12,28 +12,14 @@ class Department {
         this.departmentList = document.getElementById('department-list')
 
         Department.all.push(this) 
-
     }
 
-    addDepts(response){
-        response.data.forEach(dept => {
-            renderDeptPage(dept)
-        });
-    }
+     
 
     renderDeptPage(){
         this.element.innerHTML += 
-            `
-            <div class="dept-page">
-                <h2 class="dept-name">${this.name}</h2>
-            </div>
-            
-            <div class="dept-items">
-                <h4 class="dept-item-title">Items</h4>
-                <h3 class="dept-item-number">${this.items()} </h3
-            </div>`
-        return this.element 
-            
+            `<h2>${this.name}</h2>`
+        return this.element       
     }
 
     items(){
@@ -42,13 +28,17 @@ class Department {
 
     attachToDom(){
         this.departmentList.append(this.renderDeptPage())
-        this.element.addEventListener('click', this.displayItems)
+        this.addEventListeners()
+    }
+
+    addEventListeners(){
+        this.element.addEventListener('click',this.displayItems)
     }
 
     displayItems = () => {
         document.getElementById('item-list').innerHTML = ''
-        this.items().forEach((item) => {
-            item.attachToDom
+        this.items().forEach((i) => {
+            i.attachToDom()
         })
     }
 

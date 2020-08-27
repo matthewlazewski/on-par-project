@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
     def destroy
         item = Item.find(params[:id])
         item.destroy
+        render json: {message: "Deleted #{item.name}"}
     end
 
     def update

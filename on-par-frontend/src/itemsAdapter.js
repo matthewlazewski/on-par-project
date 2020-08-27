@@ -95,10 +95,11 @@ class ItemsAdapter{
                 }
             }
     
-            fetch(`http://localhost:3000/items/${id}, configObj`)
+            fetch(`http://localhost:3000/items/${id}`, configObj)
             .then(res => res.json())
             .then(json => {
-                
+                console.log(json)
+                alert(json.message)
             })
     
     }

@@ -39,7 +39,7 @@ class Item {
 
     editAndDeleteClick = (e) => {
         if(e.target.className === "delete"){
-            let id = e.target.parentElement.id 
+            let id = e.target.dataset.id 
             itemsAdapter.deleteItem(id)
             this.element.remove()
         } else if(e.target.className === "update") {
@@ -95,7 +95,7 @@ class Item {
     }
 
     newItemForm(){
-         
+        debugger
         return `
             <ul id="items">
 

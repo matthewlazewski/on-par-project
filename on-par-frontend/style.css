@@ -1,5 +1,36 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+  }
+
+div {
+    text-align: center;
+    align-content: center;
+}
+
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    color: #333;
+    font-family: 'Roboto Slab', serif;
+    line-height: 18px;
+    align-content: center;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+button {
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
+
 li {
     list-style: none;
+    align-content: center;
+    text-align: center;
 }
 
 form {
@@ -7,6 +38,16 @@ form {
     width: 100%;
     background-color: rgba(236, 236, 236, 0.897);
 }
+
+nav {
+    background-color: white;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    margin: 25px auto;
+    display: inline;
+    width: 100%;
+  }
 
 .heading {
     text-align: center;

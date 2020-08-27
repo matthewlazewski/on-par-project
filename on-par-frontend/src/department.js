@@ -37,7 +37,9 @@ class Department {
 
     displayItems = () => {
         document.getElementById('item-list').innerHTML = ''
-
+        const depts = document.getElementById('department-list')
+        document.getElementById('new-department-button').hidden = true 
+        depts.innerHTML = `<h1>${this.name}</h1>`
         this.items.forEach((item) => {
             console.log(item)
             item.attachToDom()

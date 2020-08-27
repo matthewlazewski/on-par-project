@@ -6,25 +6,28 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <nav class="navbar"> 
-      <ul class="navbar-list">
-        <li class="navbar-item">
-          <a class="navbar-link" id="items-nav" href="#">Items</a>
-        </li>
-        <li class="navbar-item">
-          <a class="navbar-link" id="departments-nav" href="#">Departments</a>
-        </li>
-      </ul>
-    </nav>
-    <h1 id="heading">Welcome to OnPar. Serving All Your Inventory Management Needs.</h1>
+    <div class="wrapper">
+      <nav class="navbar"> 
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" id="items-nav" href="#">Items</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" id="departments-nav" href="#">Departments</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 id="heading">Welcome to OnPar. Serving All Your Inventory Management Needs.</h1>
 
-    <div class="selected-list"></div>
-    <div id="department-list"></div>
-      <button type ="button" class="button" id="new-department-button">Add Department</button>
-    <div id="item-list" hidden="true">
-      <button type ="button" class="button" id="new-item-button">Add Item</button>
+      <div class="selected-list"></div>
+      <div id="department-list" hidden="true">
+        <button type ="button" class="button" id="new-department-button">Add Department</button>
+      </div>
+      <div id="item-list" hidden="true">
+        <button type ="button" class="button" id="new-item-button">Add Item</button>
+      </div>
     </div>
-    
+
     <script type="application/javascript" src="src/department.js" charset="UTF-8"></script>
     <script type="application/javascript" src="src/departmentsAdapter.js" charset="UTF-8"></script>
     <script type="application/javascript" src="src/item.js" charset="UTF-8"></script>

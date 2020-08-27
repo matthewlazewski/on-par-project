@@ -14,12 +14,12 @@ class Department {
         Department.all.push(this) 
     }
 
-    items(){
-        return Item.all.filter((item) => item.department_id === this.id || undefined)
+    get items(){
+        return Item.all.filter((item) => item.department_id == this.id)
     }
 
     renderDeptPage(){
-        this.element.innerHTML += 
+        this.element.innerHTML = 
             `<h2>${this.name}</h2>`
         return this.element       
     }
@@ -27,6 +27,7 @@ class Department {
     attachToDom(){
         this.departmentList.append(this.renderDeptPage())
         this.addEventListeners()
+        
     }
 
     addEventListeners(){
@@ -37,13 +38,13 @@ class Department {
     displayItems = () => {
         document.getElementById('item-list').innerHTML = ''
 
-        this.items().forEach((item) => {
+        this.items.forEach((item) => {
             console.log(item)
             item.attachToDom()
         })
     }
 
-    newDeptForm(){
+    static newDeptForm(){
          
         return `
             <ul id="departments">

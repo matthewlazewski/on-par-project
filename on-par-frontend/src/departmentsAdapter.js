@@ -15,8 +15,6 @@ class DepartmentsAdapter{
 
     sanitizeDepartment(resp){
         let dept = new Department({id: resp.id, ...resp.attributes})
-        dept.attachToDom()
-        dept.newDeptEventListener()
     }
 
     newDept(){

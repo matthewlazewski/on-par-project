@@ -22,7 +22,7 @@ class Item {
     }
 
     get department(){
-        return Department.all.find((dept) => dept.id === this.department_id)
+        return Department.all.find((dept) => dept.id == this.department_id)
     }
 
     get itemList(){
@@ -81,20 +81,17 @@ class Item {
         container.appendChild(this.element)
     }
 
-    dropDownMenu(){
-        
+    static dropDownMenu(){
         const dropDown = document.querySelector("select")
         const depts = Department.all
-        debugger 
-        for(let i = 0; i < departments.length; i++){
-            let dept = departments[i];
-            let option = document.createElement("option");
-            option.textContent = dept;
-            dropDown.appendChild(option)
-        } 
+
+
+        return depts.map((d) => {
+            return `<option value=${d.id}>${d.name}</option>`
+        }).join(' ')
     }
 
-    newItemForm(){
+    static newItemForm(){
         return `
             <ul id="items">
 
@@ -105,8 +102,8 @@ class Item {
                 <label for="item-name">Name:</label>
                 <input type="text" name="name" id="item-name"><br><br>
                 <label for="department_id">Department:</label>
-                <select name="department" id="department_id" >
-                    ${this.dropDownMenu}
+                <select name="department_id" id="department_id" >
+                    ${this.dropDownMenu()}
                 </select><br><br>
                 <label for="item-on-hand">On Hand:</label>
                 <input type="number" name="on_hand" id="item-on-hand"><br><br>
@@ -120,17 +117,18 @@ class Item {
     }
 
 
-    newItemEventListener(){
+    static newItemEventListener(){
         const newItemButton = document.getElementById("new-item-button") 
         newItemButton.addEventListener("click", () => {
             event.preventDefault()
             newItemButton.hidden = true 
+            console.log(this)
             container.innerHTML = this.newItemForm()
             this.newItemFormListener()
         })
     }
 
-    newItemFormListener(){
+    static newItemFormListener(){
         let itemForm = document.querySelector("#item-form")
         let itemAdapter = new ItemsAdapter;
 
@@ -141,11 +139,11 @@ class Item {
     }
 
     fullRender(){
-        this.element.innerHTML +=
+        this.element.innerHTML =
             `<div id= "${this.id}">
                 <li>
                     <span class="name">Item Name: ${this.name}</span><br>
-                    <span class="name">Department: ${this.department}</span><br>
+                    <span class="name">Department: ${this.department.name}</span><br>
                     <span class="name">On Hand: ${this.on_hand}</span><br>
                     <span class="name">Par: ${this.par}</span><br>
                     <span class="order">To Order: ${this.par - this.on_hand}</span>

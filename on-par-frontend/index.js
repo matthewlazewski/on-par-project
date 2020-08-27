@@ -9,21 +9,31 @@ const newDeptButton = document.getElementById("new-department-button")
 
 document.addEventListener("DOMContentLoaded",() => {
   navBar.addEventListener("click", navigate)
+  departmentsAdapter.fetchDepartments()
+  itemsAdapter.fetchItems()
+
 })
 
 function navigate(){
   switch(true) {
     case (event.target.id === "departments-nav"):
       container.innerHTML = ""
-      departmentsAdapter.fetchDepartments()
-      debugger
+      Department.all.forEach((i) => {
+        i.attachToDom()
+        i.addEventListeners()
+      })
       newDeptButton.hidden = false 
       itemList.hidden = true 
-      departmentList.hidden = false 
+      departmentList.hidden = false
       break;
     case (event.target.id === "items-nav"):
       container.innerHTML = ""
-      itemsAdapter.fetchItems()
+      Item.all.forEach((i) => {
+        i.attachToDom()
+        // i.renderItems()
+        i.addEventListeners()
+      })
+      Item.newItemEventListener()
       departmentList.hidden = true 
       newDeptButton.hidden = true 
       break;

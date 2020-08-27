@@ -5,6 +5,7 @@ const container = document.querySelector(".selected-list")
 const newItemButton = document.getElementById("new-item-button")
 const itemList = document.getElementById("item-list")
 const departmentList = document.getElementById("department-list")
+const newDeptButton = document.getElementById("new-department-button")
 
 document.addEventListener("DOMContentLoaded",() => {
   navBar.addEventListener("click", navigate)
@@ -15,6 +16,7 @@ function navigate(){
     case (event.target.id === "departments-nav"):
       container.innerHTML = ""
       departmentsAdapter.fetchDepartments()
+      newDeptButton.hidden = false 
       newItemButton.hidden = true 
       itemList.hidden = true 
       departmentList.hidden = false 
@@ -24,6 +26,7 @@ function navigate(){
       departmentList.hidden = true 
       itemsAdapter.fetchItems()
       newItemButton.hidden = false 
+      newDeptButton.hidden = true 
       break;
   }
 }

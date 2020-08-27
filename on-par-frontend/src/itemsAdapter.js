@@ -56,12 +56,12 @@ class ItemsAdapter{
     updateItem(itemId) {
         debugger 
         const name = document.getElementById(`update-price-${itemId}`).value 
-        const onHand = document.getElementById(`update-on-hand-${itemId}`).value
+        const on_hand = document.getElementById(`update-on-hand-${itemId}`).value
         const par = document.getElementById(`update-par-${itemId}`).value
 
         let editObj = {
             name,
-            onHand,
+            on_hand,
             par
         }
 

@@ -43,4 +43,42 @@ class Department {
         })
     }
 
+    newDeptForm(){
+         
+        return `
+            <ul id="departments">
+
+            </ul>
+        
+            <h3>Add Department</h3>
+                <form id="dept-form">
+                <label for="department-name">Name:</label>
+                <input type="text" name="name" id="department-name"><br><br>
+            
+                <input type="submit" id="create-item-button" value="Create Item">
+                <br>
+            </form>
+        `
+    }
+
+    newItemEventListener(){
+        const newDeptButton = document.getElementById("new-department-button") 
+        newDeptButton.addEventListener("click", () => {
+            event.preventDefault()
+            newDeptButton.hidden = true 
+            container.innerHTML = this.newDeptForm()
+            this.newDeptFormListener()
+        })
+    }
+
+    newDeptFormListener(){
+        let deptForm = document.querySelector("#dept-form")
+        let deptAdapter = new DepartmentsAdapter;
+
+        deptForm.addEventListener("submit", () => {
+            event.preventDefault()
+            deptAdapter.newDept()
+        })
+    }
+
 }

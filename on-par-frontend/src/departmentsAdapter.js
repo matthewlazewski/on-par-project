@@ -17,4 +17,33 @@ class DepartmentsAdapter{
         let dept = new Department({id: resp.id, ...resp.attributes})
         dept.attachToDom()
     }
+
+    newDept(){
+
+        const name = document.getElementById('dept-name').value 
+    
+        let newObj = {
+            name
+        }
+
+        let configObj = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json" 
+            },
+            body: JSON.stringify(newObj)
+        }
+
+        fetch(this.baseUrl, configObj)
+            .then(resp => resp.json())
+            .then(json => { 
+                console.log(json)
+                let dept = new Department(json.data.attributes)
+                dept.renderItems()
+                dept.attachToDom()
+                let form = document.getElementById('dept-form')
+                form.hidden = true 
+            })  
+    }
 }

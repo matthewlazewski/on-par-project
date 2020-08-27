@@ -25,6 +25,7 @@ class ItemsAdapter{
         const name = document.getElementById('item-name').value 
         const onHand = document.getElementById('item-on-hand').value
         const par = document.getElementById('item-par').value
+        debugger
 
         let newObj = {
             name,

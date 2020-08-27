@@ -15,13 +15,12 @@ class Department {
     }
 
     items(){
-        return Item.all.filter((item) => item.department_id === this.id)  
+        return Item.all.filter((item) => item.department_id === this.id || undefined)
     }
 
     renderDeptPage(){
         this.element.innerHTML += 
-            `<h2>${this.name}</h2>
-            <p>${this.displayItems()}`
+            `<h2>${this.name}</h2>`
         return this.element       
     }
 
@@ -32,12 +31,15 @@ class Department {
 
     addEventListeners(){
         this.element.addEventListener('click',this.displayItems)
+        
     }
 
     displayItems = () => {
         document.getElementById('item-list').innerHTML = ''
-        this.items().forEach((i) => {
-            i.attachToDom()
+
+        this.items().forEach((item) => {
+            console.log(item)
+            item.attachToDom()
         })
     }
 

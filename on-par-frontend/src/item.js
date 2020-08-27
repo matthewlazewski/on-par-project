@@ -61,7 +61,7 @@ class Item {
         editForm.id = `update-form-${id}`
         editForm.innerHTML = `
         <input type="text" id="update-name-${item.name}" value="${item.name}" name="name">
-        <input type="number" id="update-on-had-${item.on_hand}" value="${item.on_hand}" name="on_hand">
+        <input type="number" id="update-on-hand-${item.on_hand}" value="${item.on_hand}" name="on_hand">
         <input type="number" id= "update-par-${item.par}" value="${item.par}" name="par">`
 
         item.element.querySelector('li').append(editForm)
@@ -108,7 +108,7 @@ class Item {
                     ${this.dropDownMenu}
                 </select><br><br>
                 <label for="item-on-hand">On Hand:</label>
-                <input type="number" name="on-hand" id="item-on-hand"><br><br>
+                <input type="number" name="on_hand" id="item-on-hand"><br><br>
                 <label for="item-par">Par:</label>
                 <input type="number" name="par" id="item-par"><br><br>
             

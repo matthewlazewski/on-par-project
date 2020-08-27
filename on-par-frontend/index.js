@@ -16,14 +16,15 @@ function navigate(){
     case (event.target.id === "departments-nav"):
       container.innerHTML = ""
       departmentsAdapter.fetchDepartments()
+      debugger
       newDeptButton.hidden = false 
       itemList.hidden = true 
       departmentList.hidden = false 
       break;
     case (event.target.id === "items-nav"):
       container.innerHTML = ""
-      departmentList.hidden = true 
       itemsAdapter.fetchItems()
+      departmentList.hidden = true 
       newDeptButton.hidden = true 
       break;
   }

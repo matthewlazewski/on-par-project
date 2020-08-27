@@ -84,18 +84,17 @@ class Item {
     dropDownMenu(){
         
         const dropDown = document.querySelector("select")
-        const depts = Department.all 
+        const depts = Department.all
+        debugger 
         for(let i = 0; i < departments.length; i++){
             let dept = departments[i];
             let option = document.createElement("option");
             option.textContent = dept;
             dropDown.appendChild(option)
-        }
-        debugger 
+        } 
     }
 
     newItemForm(){
-        debugger
         return `
             <ul id="items">
 

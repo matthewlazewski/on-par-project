@@ -46,7 +46,7 @@ class ItemsAdapter{
             .then(json => { 
                 console.log(json)
                 let item = new Item(json.data.attributes)
-                item.renderItems()
+                // item.renderItems()
                 item.attachToDom()
                 let form = document.getElementById('item-form')
                 form.hidden = true 
@@ -54,8 +54,7 @@ class ItemsAdapter{
     }
 
     updateItem(itemId) {
-        debugger 
-        const name = document.getElementById(`update-price-${itemId}`).value 
+        const name = document.getElementById(`update-name-${itemId}`).value 
         const on_hand = document.getElementById(`update-on-hand-${itemId}`).value
         const par = document.getElementById(`update-par-${itemId}`).value
 
@@ -75,12 +74,15 @@ class ItemsAdapter{
             body: JSON.stringify(editObj)
         }
 
-        fetch(this.baseUrl + `/${item}`, configObj)
+        fetch(this.baseUrl + `/${itemId}`, configObj)
             .then(resp => resp.json())
             .then(json => {
-                let item = Item.all.find((i) => i.id === json.data.attributes.id)
+                let item = Item.all.find((i) => i.id === json.data.id)
                 item.returnUpdatedItem(json.data.attributes)
             })
+
+        let form = document.getElementById(`update-form-${itemId}`)
+        form.remove()
         
     }
 

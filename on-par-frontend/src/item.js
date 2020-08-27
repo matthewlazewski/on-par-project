@@ -43,32 +43,34 @@ class Item {
             itemsAdapter.deleteItem(id)
             this.element.remove()
         } else if(e.target.className === "update") {
+            let itemId = e.target.dataset.id 
             e.target.className = "save"
             e.target.innerText = "Save"
-            this.renderEditForm(id)
+            this.renderEditForm(itemId)
         } else if(e.target.className === "save"){
-            let id = e.target.dataset.id 
+            let form = e.target.parentElement
             e.target.className = "update"
-            e.target.innerText = "Update"
-            itemsAdapter.updateItem(id)
+            e.target.innerText ="Update"
+            itemsAdapter.updateItem(this.id)
         }
     }
 
-    renderEditForm(id){
-        let item = Item.findById(id)
+    renderEditForm(itemId){
+        let item = Item.findById(itemId)
 
         let editForm = document.createElement('div')
-        editForm.id = `update-form-${id}`
+        
+        editForm.id = `update-form-${itemId}`
         editForm.innerHTML = `
-        <input type="text" id="update-name-${item.name}" value="${item.name}" name="name">
-        <input type="number" id="update-on-hand-${item.on_hand}" value="${item.on_hand}" name="on_hand">
-        <input type="number" id= "update-par-${item.par}" value="${item.par}" name="par">`
+        <input type="text" id="update-name-${itemId}" value="${item.name}" name="name">
+        <input type="number" id="update-on-hand-${itemId}" value="${item.on_hand}" name="on_hand">
+        <input type="number" id= "update-par-${itemId}" value="${item.par}" name="par">`
 
         item.element.querySelector('li').append(editForm)
     }
 
     attachToDom(){
-        container.append(this.fullRender())
+        this.itemList.append(this.fullRender())
         this.addEventListeners()
         this.itemList.hidden = false 
     }
@@ -149,12 +151,20 @@ class Item {
                     <span class="name">Par: ${this.par}</span><br>
                     <span class="order">To Order: ${this.par - this.on_hand}</span>
                 </li>
-                    <button class="update">Edit Item</button>
-                    <button class="delete">Delete Item</button>
+                <button class="delete" data-id="${this.id}">Delete</button>
+                <button class="update" data-id="${this.id}">Update</button>
                 <br><br>
             </div>
             `
         return this.element
+    }
+
+    returnUpdatedItem({name,on_hand,par}){
+        this.name = name
+        this.on_hand = on_hand
+        this.par = par
+
+        this.fullRender()
     }
     
 };

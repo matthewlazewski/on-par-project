@@ -16,15 +16,18 @@ class DepartmentsAdapter{
     sanitizeDepartment(resp){
         let dept = new Department({id: resp.id, ...resp.attributes})
         dept.attachToDom()
+        dept.newDeptEventListener()
     }
 
     newDept(){
 
-        const name = document.getElementById('dept-name').value 
-    
+        const name = document.getElementById('department-name').value 
+        
         let newObj = {
             name
         }
+
+        
 
         let configObj = {
             method: 'POST',
@@ -40,7 +43,6 @@ class DepartmentsAdapter{
             .then(json => { 
                 console.log(json)
                 let dept = new Department(json.data.attributes)
-                dept.renderItems()
                 dept.attachToDom()
                 let form = document.getElementById('dept-form')
                 form.hidden = true 

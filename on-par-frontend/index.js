@@ -17,7 +17,6 @@ function navigate(){
       container.innerHTML = ""
       departmentsAdapter.fetchDepartments()
       newDeptButton.hidden = false 
-      newItemButton.hidden = true 
       itemList.hidden = true 
       departmentList.hidden = false 
       break;
@@ -25,7 +24,6 @@ function navigate(){
       container.innerHTML = ""
       departmentList.hidden = true 
       itemsAdapter.fetchItems()
-      newItemButton.hidden = false 
       newDeptButton.hidden = true 
       break;
   }

@@ -55,13 +55,13 @@ class Department {
                 <label for="department-name">Name:</label>
                 <input type="text" name="name" id="department-name"><br><br>
             
-                <input type="submit" id="create-item-button" value="Create Item">
+                <input type="submit" id="create-department-button" value="Create Department">
                 <br>
             </form>
         `
     }
 
-    newItemEventListener(){
+    newDeptEventListener(){
         const newDeptButton = document.getElementById("new-department-button") 
         newDeptButton.addEventListener("click", () => {
             event.preventDefault()

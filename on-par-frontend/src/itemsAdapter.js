@@ -23,13 +23,12 @@ class ItemsAdapter{
     newItem(){
 
         const name = document.getElementById('item-name').value 
-        const onHand = document.getElementById('item-on-hand').value
+        const on_hand = document.getElementById('item-on-hand').value
         const par = document.getElementById('item-par').value
-        debugger
 
         let newObj = {
             name,
-            onHand,
+            on_hand,
             par
         }
 
@@ -51,8 +50,7 @@ class ItemsAdapter{
                 item.attachToDom()
                 let form = document.getElementById('item-form')
                 form.hidden = true 
-            })
-            
+            })  
     }
 
     updateItem(itemId) {

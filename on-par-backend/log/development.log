@@ -7958,3 +7958,99 @@ Processing by ItemsController#index as */*
 Completed 200 OK in 144ms (Views: 133.7ms | ActiveRecord: 2.2ms | Allocations: 837831)
 
 
+Started GET "/items" for ::1 at 2020-08-27 08:55:03 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 139ms (Views: 133.4ms | ActiveRecord: 1.7ms | Allocations: 837831)
+
+
+Started POST "/items" for ::1 at 2020-08-27 08:55:28 -0500
+Processing by ItemsController#create as JSON
+  Parameters: {"name"=>"Tomato", "onHand"=>"2", "par"=>"200", "item"=>{"name"=>"Tomato", "par"=>"200"}}
+  [1m[35m (4.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[36mDepartment Load (2.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[36mItem Create (7.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "par", "department_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tomato"], ["par", 200], ["department_id", 1], ["created_at", "2020-08-27 13:55:28.566933"], ["updated_at", "2020-08-27 13:55:28.566933"]]
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/items_controller.rb:16:in `create'
+Completed 200 OK in 277ms (Views: 28.6ms | ActiveRecord: 19.0ms | Allocations: 1221069)
+
+
+Started GET "/items" for ::1 at 2020-08-27 08:55:34 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (7.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 158ms (Views: 145.5ms | ActiveRecord: 7.0ms | Allocations: 907423)
+
+
+Started POST "/items" for ::1 at 2020-08-27 08:55:57 -0500
+Processing by ItemsController#create as JSON
+  Parameters: {"name"=>"Shoes", "onHand"=>"5", "par"=>"44", "item"=>{"name"=>"Shoes", "par"=>"44"}}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[36mDepartment Load (7.8ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[36mItem Create (5.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "par", "department_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Shoes"], ["par", 44], ["department_id", 1], ["created_at", "2020-08-27 13:55:57.590980"], ["updated_at", "2020-08-27 13:55:57.590980"]]
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/items_controller.rb:16:in `create'
+Completed 200 OK in 201ms (Views: 15.1ms | ActiveRecord: 17.7ms | Allocations: 1221068)
+
+
+Started GET "/items/undefined,%20configObj" for ::1 at 2020-08-27 08:56:55 -0500
+Processing by ItemsController#show as */*
+  Parameters: {"id"=>"undefined, configObj"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:9:in `show'
+Completed 404 Not Found in 74ms (ActiveRecord: 1.5ms | Allocations: 205496)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=undefined, configObj):
+  
+app/controllers/items_controller.rb:9:in `show'
+Started GET "/items" for ::1 at 2020-08-27 08:56:56 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (6.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 227ms (Views: 201.8ms | ActiveRecord: 6.8ms | Allocations: 1008171)
+
+
+Started POST "/items" for ::1 at 2020-08-27 08:57:10 -0500
+Processing by ItemsController#create as JSON
+  Parameters: {"name"=>"Shirt", "onHand"=>"4", "par"=>"22", "item"=>{"name"=>"Shirt", "par"=>"22"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[36mDepartment Load (1.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[36mItem Create (10.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "par", "department_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Shirt"], ["par", 22], ["department_id", 1], ["created_at", "2020-08-27 13:57:10.289193"], ["updated_at", "2020-08-27 13:57:10.289193"]]
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/items_controller.rb:16:in `create'
+Completed 200 OK in 202ms (Views: 13.6ms | ActiveRecord: 23.7ms | Allocations: 1245472)
+
+
+Started GET "/items" for ::1 at 2020-08-27 08:57:45 -0500
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+Completed 200 OK in 157ms (Views: 152.0ms | ActiveRecord: 1.4ms | Allocations: 1046606)
+
+
+Started POST "/items" for ::1 at 2020-08-27 08:57:57 -0500
+Processing by ItemsController#create as JSON
+  Parameters: {"name"=>"Lamp", "on_hand"=>"1", "par"=>"90", "item"=>{"name"=>"Lamp", "on_hand"=>"1", "par"=>"90"}}
+  [1m[35m (7.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[36mDepartment Load (1.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[36mItem Create (3.9ms)[0m  [1m[32mINSERT INTO "items" ("name", "on_hand", "par", "department_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lamp"], ["on_hand", 1], ["par", 90], ["department_id", 1], ["created_at", "2020-08-27 13:57:57.259133"], ["updated_at", "2020-08-27 13:57:57.259133"]]
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/items_controller.rb:16:in `create'
+Completed 200 OK in 295ms (Views: 13.9ms | ActiveRecord: 16.3ms | Allocations: 1249352)
+
+

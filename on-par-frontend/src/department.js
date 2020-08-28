@@ -41,6 +41,12 @@ class Department {
         const newDeptButton = document.getElementById('new-department-button')
         newDeptButton.hidden = true
         depts.hidden = true 
+
+        const titleDiv = document.querySelector(".selected-list")
+        const title = document.createElement("h1")
+        title.innerHTML =`<h1>${this.name}</h1>`
+        titleDiv.appendChild(title)
+
         this.items.forEach((item) => {
             item.attachToDom()
         })

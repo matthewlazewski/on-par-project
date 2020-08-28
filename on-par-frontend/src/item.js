@@ -96,9 +96,9 @@ class Item {
             <ul id="items">
 
             </ul>
-        
+            <form id="item-form">
             <h3>Add Item</h3>
-                <form id="item-form">
+            
                 <label for="item-name">Name:</label>
                 <input type="text" name="name" id="item-name"><br><br>
                 <label for="department_id">Department:</label>
@@ -122,7 +122,6 @@ class Item {
         newItemButton.addEventListener("click", () => {
             event.preventDefault()
             newItemButton.hidden = true 
-            console.log(this)
             container.innerHTML = this.newItemForm()
             this.newItemFormListener()
         })

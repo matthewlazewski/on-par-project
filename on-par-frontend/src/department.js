@@ -38,10 +38,10 @@ class Department {
     displayItems = () => {
         document.getElementById('item-list').innerHTML = ''
         const depts = document.getElementById('department-list')
-        document.getElementById('new-department-button').hidden = true 
-        depts.innerHTML = `<h1>${this.name}</h1>`
+        const newDeptButton = document.getElementById('new-department-button')
+        newDeptButton.hidden = true
+    
         this.items.forEach((item) => {
-            console.log(item)
             item.attachToDom()
         })
     }
@@ -60,21 +60,21 @@ class Department {
             
                 <input type="submit" id="create-department-button" value="Create Department">
                 <br>
-            </form>
-        `
+            </form>`
+        
     }
 
-    newDeptEventListener(){
-        const newDeptButton = document.getElementById("new-department-button") 
-        newDeptButton.addEventListener("click", () => {
+    static newDeptEventListener(){
+        const newButton = document.getElementById("new-department-button")
+        newButton.addEventListener("click", () => {
             event.preventDefault()
-            newDeptButton.hidden = true 
+            newButton.hidden = true 
             container.innerHTML = this.newDeptForm()
             this.newDeptFormListener()
         })
     }
 
-    newDeptFormListener(){
+    static newDeptFormListener(){
         let deptForm = document.querySelector("#dept-form")
         let deptAdapter = new DepartmentsAdapter;
 

@@ -18,23 +18,23 @@ function navigate(){
   switch(true) {
     case (event.target.id === "departments-nav"):
       container.innerHTML = ""
+      newDeptButton.hidden = false 
       Department.all.forEach((i) => {
         i.attachToDom()
         i.addEventListeners()
-      })
-      newDeptButton.hidden = false 
-      itemList.hidden = true 
+      }) 
+      Department.newDeptEventListener()
       departmentList.hidden = false
+      itemList.hidden = true 
       break;
     case (event.target.id === "items-nav"):
       container.innerHTML = ""
       Item.all.forEach((i) => {
         i.attachToDom()
-        // i.renderItems()
         i.addEventListeners()
       })
       Item.newItemEventListener()
-      departmentList.hidden = true 
+      departmentList.innerHTML = ''
       newDeptButton.hidden = true 
       break;
   }

@@ -27,7 +27,6 @@ class Department {
     attachToDom(){
         this.departmentList.append(this.renderDeptPage())
         this.addEventListeners()
-        
     }
 
     addEventListeners(){

@@ -12,7 +12,6 @@ class ItemsController < ApplicationController
 
     def create 
         item = Item.new(item_params)
-        item.department_id = 1
         item.save 
         render json: ItemSerializer.new(item)
     end

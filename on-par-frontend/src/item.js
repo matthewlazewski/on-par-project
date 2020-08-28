@@ -134,6 +134,7 @@ class Item {
         itemForm.addEventListener("submit", () => {
             event.preventDefault()
             itemAdapter.newItem()
+
         })
     }
 

@@ -14,18 +14,20 @@ class ItemsAdapter{
     }
 
     sanitizeItem(resp){
-        let i = new Item({id: resp.id, ...resp.attributes})
+        return new Item({id: resp.id, ...resp.attributes})
     }
 
     newItem(){
 
         const name = document.getElementById('item-name').value 
         const on_hand = document.getElementById('item-on-hand').value
+        const department_id = document.getElementById('department_id').value
         const par = document.getElementById('item-par').value
 
         let newObj = {
             name,
             on_hand,
+            department_id,
             par
         }
 
@@ -42,9 +44,9 @@ class ItemsAdapter{
             .then(resp => resp.json())
             .then(json => { 
                 console.log(json)
-                let item = new Item(json.data.attributes)
-                // item.renderItems()
+                let item = this.sanitizeItem(json.data)
                 item.attachToDom()
+                
                 let form = document.getElementById('item-form')
                 form.hidden = true 
             })  

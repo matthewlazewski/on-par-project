@@ -18,7 +18,6 @@ function navigate(){
   switch(true) {
     case (event.target.id === "departments-nav"):
       container.innerHTML = ""
-      newDeptButton.hidden = false 
       Department.all.forEach((i) => {
         i.attachToDom()
         i.addEventListeners()
@@ -34,8 +33,7 @@ function navigate(){
         i.addEventListeners()
       })
       Item.newItemEventListener()
-      departmentList.innerHTML = ''
-      newDeptButton.hidden = true 
+      departmentList.hidden = true 
       break;
   }
 }

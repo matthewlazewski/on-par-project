@@ -1,8 +1,18 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: 'Roboto Slab', serif;
-  }
+    font-family: 'Trocchi', serif;
+}
+
+h1 {
+    text-align: center;
+    color: #7c795d; 
+    font-family: 'Trocchi', serif; 
+    font-size: 45px; 
+    font-weight: normal; 
+    line-height: 48px; 
+    margin: 0; 
+}
 
 div {
     text-align: center;
@@ -13,7 +23,7 @@ div {
 body {
     background-attachment: fixed;
     background-size: cover;
-    color: black;
+    color: #191970;
     font-family: 'Roboto Slab', serif;
     line-height: 18px;
     align-content: center;
@@ -22,9 +32,25 @@ body {
   }
 
 button {
+    display: inline-block;
     text-align: center;
     align-content: center;
     margin: auto;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background-color: #ededed;
+    border-radius: 6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#5a1be0;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+    
 }
 
 li {
@@ -52,12 +78,8 @@ form {
 
 .wrapper nav {
     width: 100%;
-    float: center;
-    display: flex;
+    display: inline-block;
     justify-content: space-between;
     align-items: center;
-  }
-
-.heading {
     text-align: center;
-}
+  }

@@ -1,4 +1,9 @@
 html, body {
+    background-image: url(../on-par-frontend/images/blue.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     height: 100%;
     width: 100%;
     font-family: 'Trocchi', serif;
@@ -73,7 +78,7 @@ form {
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
     margin: auto;
-    width: 100%;
+    width: 85%;
 }
 
 .wrapper nav {

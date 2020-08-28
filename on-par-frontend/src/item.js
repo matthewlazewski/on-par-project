@@ -142,11 +142,11 @@ class Item {
         this.element.innerHTML =
             `<div id= "${this.id}">
                 <li>
-                    <span class="name">Item Name: ${this.name}</span><br>
-                    <span class="name">Department: ${this.department.name}</span><br>
-                    <span class="name">On Hand: ${this.on_hand}</span><br>
-                    <span class="name">Par: ${this.par}</span><br>
-                    <span class="order">To Order: ${this.par - this.on_hand}</span>
+                    <span class="name"><u>Item Name:</u> ${this.name}</span><br>
+                    <span class="name"><u>Department:</u> ${this.department.name}</span><br>
+                    <span class="name"><u>On Hand:</u> ${this.on_hand}</span><br>
+                    <span class="name"><u>Par:</u> ${this.par}</span><br>
+                    <span class="order"><u>To Order:</u> ${this.par - this.on_hand}</span>
                 </li>
                 <button class="delete" data-id="${this.id}">Delete</button>
                 <button class="update" data-id="${this.id}">Update</button>

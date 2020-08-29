@@ -14,7 +14,7 @@ class DepartmentsAdapter{
     }
 
     sanitizeDepartment(resp){
-        let dept = new Department({id: resp.id, ...resp.attributes})
+        return new Department({id: resp.id, ...resp.attributes})
     }
 
     newDept(){
@@ -40,8 +40,9 @@ class DepartmentsAdapter{
             .then(resp => resp.json())
             .then(json => { 
                 console.log(json)
-                let dept = new Department(json.data.attributes)
+                let dept = this.sanitizeDepartment(json.data)
                 dept.attachToDom()
+                
                 let form = document.getElementById('dept-form')
                 form.hidden = true 
             })  

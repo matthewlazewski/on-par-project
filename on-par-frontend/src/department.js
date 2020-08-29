@@ -35,9 +35,11 @@ class Department {
     }
 
     displayItems = () => {
-
+        const itemList = document.getElementById('item-list')
+        itemList.hidden = true 
         const depts = document.getElementById('department-list')
         const newDeptButton = document.getElementById('new-department-button')
+
         newDeptButton.hidden = true
         depts.hidden = true 
 

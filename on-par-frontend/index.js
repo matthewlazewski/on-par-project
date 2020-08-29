@@ -28,13 +28,14 @@ function navigate(){
       break;
     case (event.target.id === "items-nav"):
       container.innerHTML = ""
+      departmentList.hidden = true 
+      itemList.hidden = false 
       Item.all.forEach((i) => {
         i.attachToDom()
         i.addEventListeners()
       })
       newItemButton.hidden = false 
       Item.newItemEventListener()
-      departmentList.hidden = true 
       break;
   }
 }

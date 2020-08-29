@@ -30,6 +30,7 @@ class Item {
     }
 
     addEventListeners(){
+        this.newItemEventListener()
         this.element.addEventListener('click', this.editAndDeleteClick)
     }
 
@@ -75,13 +76,14 @@ class Item {
         this.itemList.hidden = false 
     }
 
+
     renderItems(){
         this.element.innerHTML = ""
 
         container.appendChild(this.element)
     }
 
-    static dropDownMenu(){
+    dropDownMenu(){
         const depts = Department.all
 
         return depts.map((d) => {
@@ -89,7 +91,7 @@ class Item {
         }).join(' ')
     }
 
-    static newItemForm(){
+    newItemForm(){
         return `
             <ul id="items">
 
@@ -115,8 +117,10 @@ class Item {
     }
 
 
-    static newItemEventListener(){
+    newItemEventListener(){
+        itemList.hidden = false 
         const newItemButton = document.getElementById("new-item-button") 
+        newItemButton.hidden = false 
         newItemButton.addEventListener("click", () => {
             event.preventDefault()
             newItemButton.hidden = true 
@@ -125,7 +129,7 @@ class Item {
         })
     }
 
-    static newItemFormListener(){
+    newItemFormListener(){
         let itemForm = document.querySelector("#item-form")
         let itemAdapter = new ItemsAdapter;
 

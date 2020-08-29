@@ -32,6 +32,7 @@ function navigate(){
         i.attachToDom()
         i.addEventListeners()
       })
+      newItemButton.hidden = false 
       Item.newItemEventListener()
       departmentList.hidden = true 
       break;

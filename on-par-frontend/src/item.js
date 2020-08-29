@@ -82,9 +82,7 @@ class Item {
     }
 
     static dropDownMenu(){
-        const dropDown = document.querySelector("select")
         const depts = Department.all
-
 
         return depts.map((d) => {
             return `<option value=${d.id}>${d.name}</option>`

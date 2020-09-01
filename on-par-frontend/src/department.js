@@ -1,6 +1,6 @@
 class Department {
     static all = [];
-    
+
     static newDeptRow = document.createElement("div")
     static departmentRow = document.createElement("div")
 
@@ -39,7 +39,8 @@ class Department {
         itemList.hidden = true 
         const depts = document.getElementById('department-list')
         const newDeptButton = document.getElementById('new-department-button')
-
+        const deptItemList = document.getElementById("department-items-list")
+        deptItemList.innerHTML = ""
         newDeptButton.hidden = true
         depts.hidden = true 
 
@@ -49,7 +50,7 @@ class Department {
         titleDiv.appendChild(title)
 
         this.items.forEach((item) => {
-            item.attachToDom()
+            item.attachToDeptItemList()
         })
     }
 

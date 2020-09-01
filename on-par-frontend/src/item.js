@@ -2,6 +2,7 @@ class Item {
     static newItemRow  = document.createElement("div")
     static itemRow = document.createElement("div")
     static itemList = document.createElement("list")
+    static deptItemList = document.createElement("list")
     static all = []
 
     constructor({id, name,on_hand,par, department_id}){
@@ -27,6 +28,10 @@ class Item {
 
     get itemList(){
         return document.getElementById('item-list')
+    }
+
+    get deptItemList(){
+        return document.getElementById('department-items-list')
     }
 
     addEventListeners(){
@@ -74,6 +79,12 @@ class Item {
         this.itemList.append(this.fullRender())
         this.addEventListeners()
         this.itemList.hidden = false 
+    }
+
+    attachToDeptItemList(){
+        this.deptItemList.append(this.fullRender())
+        this.addEventListeners
+        this.itemList.hidden = true 
     }
 
 

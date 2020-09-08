@@ -6,6 +6,7 @@ const newItemButton = document.getElementById("new-item-button")
 const itemList = document.getElementById("item-list")
 const departmentList = document.getElementById("department-list")
 const newDeptButton = document.getElementById("new-department-button")
+const deptItemList = document.getElementById("department-items-list")
 
 document.addEventListener("DOMContentLoaded",() => {
   navBar.addEventListener("click", navigate)
@@ -25,6 +26,7 @@ function navigate(){
       Department.newDeptEventListener()
       departmentList.hidden = false
       itemList.hidden = true 
+      deptItemList.hidden = true 
       break;
     case (event.target.id === "items-nav"):
       container.innerHTML = ""
@@ -35,7 +37,6 @@ function navigate(){
         i.addEventListeners()
       })
       newItemButton.hidden = false 
-      Item.newItemEventListener()
       break;
   }
 }

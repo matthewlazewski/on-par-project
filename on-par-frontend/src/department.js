@@ -40,6 +40,7 @@ class Department {
         const depts = document.getElementById('department-list')
         const newDeptButton = document.getElementById('new-department-button')
         const deptItemList = document.getElementById("department-items-list")
+        deptItemList.hidden = false 
         deptItemList.innerHTML = ""
         newDeptButton.hidden = true
         depts.hidden = true 

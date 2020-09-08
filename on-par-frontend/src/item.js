@@ -37,6 +37,7 @@ class Item {
     addEventListeners(){
         this.newItemEventListener()
         this.element.addEventListener('click', this.editAndDeleteClick)
+        this.search()
     }
 
     static findById(id){
@@ -85,6 +86,23 @@ class Item {
         this.deptItemList.append(this.fullRender())
         this.addEventListeners
         this.itemList.hidden = true 
+    }
+
+    search(){
+        const searchBar = document.getElementById("search-bar")
+        const items = Item.all
+        searchBar.addEventListener('keyup', function(event) {
+            const searchTerm = event.target.value.toLowerCase()
+            console.log(typeof(searchTerm))
+            items.forEach((item) => {
+                const itemName = item.name 
+                if(itemName.toLowerCase().indexOf(searchTerm) != -1){
+                    item.hidden = false
+                } else {
+                    item.hidden= true
+                }
+            })
+        })
     }
 
 
